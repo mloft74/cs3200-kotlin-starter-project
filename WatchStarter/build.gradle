@@ -3,12 +3,14 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.watchstarter"
+        applicationId "com.example.watchapp"
         minSdkVersion 28
         targetSdkVersion 30
         versionCode 1
