@@ -1,0 +1,4 @@
+include ':Api'
+include ':WatchStarter'
+include ':PhoneStarter'
+rootProject.name = "Kotlin Starter Project"
