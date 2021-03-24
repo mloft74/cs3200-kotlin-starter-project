@@ -3,8 +3,6 @@ package com.example.api
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableList
 import androidx.databinding.ObservableList.OnListChangedCallback
@@ -24,7 +22,7 @@ abstract class CustomAdapter<T>(protected val data: ObservableArrayList<T>) : Re
         return data.size
     }
 
-    class ViewHolder(val itemView: View) : RecyclerView.ViewHolder(itemView)
+    class ViewHolder(val view: View) : RecyclerView.ViewHolder(view)
 
     init {
         data.addOnListChangedCallback(object : OnListChangedCallback<ObservableList<T>?>() {
@@ -58,11 +56,11 @@ abstract class CustomAdapter<T>(protected val data: ObservableArrayList<T>) : Re
 //
 //    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 //        val contact = data[position]
-//        val nameDisplay = holder.itemView.findViewById<TextView>(R.id.nameDisplay)
-//        val phoneNumberDisplay = holder.itemView.findViewById<TextView>(R.id.phoneNumberDisplay)
+//        val nameDisplay = holder.view.findViewById<TextView>(R.id.nameDisplay)
+//        val phoneNumberDisplay = holder.view.findViewById<TextView>(R.id.phoneNumberDisplay)
 //        nameDisplay.setText(contact.name)
 //        phoneNumberDisplay.setText(contact.phoneNumber);
-//        val button = holder.itemView.findViewById<Button>(R.id.call)
+//        val button = holder.view.findViewById<Button>(R.id.call)
 //        button.setOnClickListener { listener.onClick(contact) }
 //    }
 //}
